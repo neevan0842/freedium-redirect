@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "LeetCode Google Login Helper",
-  "version": "1.0.0",
-  "description": "Helps automate Google login process for LeetCode",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["https://leetcode.com/*"],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "LeetCode Login Helper"
-  }
+  "name": "Medium Freedium Redirect",
+  "version": "2.0.0",
+  "description": "Automatically opens Medium articles on Freedium (free reader).",
+  "content_scripts": [
+    {
+      "matches": ["https://medium.com/*", "https://*.medium.com/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_start"
+    }
+  ]
 }
