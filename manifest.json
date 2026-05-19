@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Medium Freedium Redirect",
-  "version": "2.0.0",
-  "description": "Automatically opens Medium articles on Freedium (free reader).",
+  "version": "2.1.0",
+  "description": "Button on Medium articles to open on Freedium.",
   "content_scripts": [
     {
       "matches": ["https://medium.com/*", "https://*.medium.com/*"],
       "js": ["src/content.js"],
-      "run_at": "document_start"
+      "run_at": "document_idle"
     }
   ]
 }
