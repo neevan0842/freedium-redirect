@@ -2,12 +2,12 @@
   "manifest_version": 3,
   "name": "Medium Freedium Redirect",
   "version": "2.1.0",
-  "description": "Button on Medium articles to open on Freedium.",
-  "content_scripts": [
-    {
-      "matches": ["https://medium.com/*", "https://*.medium.com/*"],
-      "js": ["src/content.js"],
-      "run_at": "document_idle"
-    }
-  ]
+  "description": "Open the current Medium page on Freedium from the extension icon.",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Open on Freedium"
+  }
 }
